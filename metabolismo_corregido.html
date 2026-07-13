@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Metabolismo</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body><div style="padding:15px"><a href="index_biologia_moderno.html" style="padding:10px 16px;background:#2e7d32;color:white;text-decoration:none;border-radius:8px">← Volver al Inicio</a></div>
+
+<div class="particles"></div>
+
+<nav>
+<a href="#quees">¿Qué es?</a>
+<a href="#causas">Factores</a>
+<a href="#consecuencias">Consecuencias</a>
+<a href="#datos">Datos</a>
+<a href="#quiz">Quiz</a>
+</nav>
+
+<header>
+
+<h1>METABOLISMO</h1>
+
+<p>
+El metabolismo es el conjunto de procesos químicos que ocurren dentro del organismo para transformar los alimentos en energía, permitiendo que las células funcionen correctamente y manteniendo todas las funciones vitales del cuerpo.
+</p>
+
+</header>
+
+<section id="quees">
+
+<h2 class="titulo">¿Qué es el metabolismo?</h2>
+
+<div class="bloque">
+
+<img
+class="imagen"
+src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=1200"
+alt="Metabolismo">
+
+<p>
+El metabolismo es el conjunto de reacciones químicas que permiten obtener energía de los alimentos y utilizarla para mantener las funciones vitales del cuerpo.
+</p>
+
+<br>
+
+<p>
+Incluye dos procesos fundamentales:
+<strong>Anabolismo</strong>, que construye tejidos y moléculas; y
+<strong>Catabolismo</strong>, que descompone sustancias para liberar energía.
+</p>
+
+</div>
+
+</section>
+
+<section id="causas">
+
+<h2 class="titulo">Factores que afectan el metabolismo</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🧬 Genética</h3>
+<p>La herencia influye en la velocidad metabólica de cada persona.</p>
+</div>
+
+<div class="card">
+<h3>🎂 Edad</h3>
+<p>Con el paso de los años el metabolismo suele disminuir.</p>
+</div>
+
+<div class="card">
+<h3>🏃 Actividad Física</h3>
+<p>El ejercicio incrementa el gasto energético y fortalece los músculos.</p>
+</div>
+
+<div class="card">
+<h3>🥗 Alimentación</h3>
+<p>Una dieta equilibrada favorece un metabolismo saludable.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="consecuencias">
+
+<h2 class="titulo">Consecuencias de un metabolismo alterado</h2>
+
+<div class="grid">
+
+<div class="card">
+<img class="imagen"
+src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200">
+<h3>Obesidad</h3>
+<p>Acumulación excesiva de grasa corporal debido a desequilibrios energéticos.</p>
+</div>
+
+<div class="card">
+<img class="imagen"
+src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=1200">
+<h3>Diabetes</h3>
+<p>Problemas relacionados con la regulación de la glucosa en sangre.</p>
+</div>
+
+<div class="card">
+<img class="imagen"
+src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=1200">
+<h3>Fatiga</h3>
+<p>Disminución de la energía disponible para realizar actividades diarias.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="datos">
+
+<h2 class="titulo">Datos interesantes</h2>
+
+<div class="datos">
+
+<div class="dato">
+🧠 El cerebro consume cerca del 20% de la energía corporal.
+</div>
+
+<div class="dato">
+😴 Dormir bien ayuda a regular el metabolismo.
+</div>
+
+<div class="dato">
+💪 Los músculos consumen más energía que la grasa.
+</div>
+
+<div class="dato">
+💧 Mantenerse hidratado favorece las reacciones metabólicas.
+</div>
+
+</div>
+
+</section>
+
+<section id="quiz">
+
+<h2 class="titulo">Mini Cuestionario</h2>
+
+<div class="quiz">
+
+<p><strong>¿Cuál es la función principal del metabolismo?</strong></p>
+
+<br>
+
+<label>
+<input type="radio" name="p1" value="a">
+Eliminar huesos
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="p1" value="b">
+Transformar alimentos en energía
+</label>
+
+<br><br>
+
+<label>
+<input type="radio" name="p1" value="c">
+Cambiar el color de la piel
+</label>
+
+<br>
+
+<button onclick="verificar()">
+Comprobar Respuesta
+</button>
+
+<div id="resultado" class="respuesta"></div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Fuentes Referenciales</h3>
+
+<br>
+
+<p>
+OMS • MedlinePlus • NIH • Enciclopedia Britannica
+</p>
+
+<br>
+
+<p>
+Proyecto Web Educativo sobre el Metabolismo
+</p>
+
+</footer>
+
+<script>
+
+/* ===== QUIZ ===== */
+
+function verificar(){
+
+let respuesta =
+document.querySelector('input[name="p1"]:checked');
+
+if(!respuesta){
+
+document.getElementById("resultado").innerHTML =
+"⚠️ Selecciona una opción.";
+
+return;
+
+}
+
+if(respuesta.value==="b"){
+
+document.getElementById("resultado").innerHTML =
+"✅ ¡Correcto! El metabolismo transforma los alimentos en energía.";
+
+}
+else{
+
+document.getElementById("resultado").innerHTML =
+"❌ Incorrecto. Inténtalo nuevamente.";
+
+}
+
+}
+
+/* ===== ANIMACIÓN SCROLL ===== */
+
+const observer =
+new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("visible");
+
+}
+
+});
+
+});
+
+document
+.querySelectorAll("section")
+.forEach(section=>{
+
+observer.observe(section);
+
+});
+
+</script>
+
+</body>
+</html>

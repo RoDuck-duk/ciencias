@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ciclo Celular</title>
+<link rel="stylesheet" href="css/estilos.css">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body><div style="padding:15px"><a href="index_biologia_moderno.html" style="padding:10px 16px;background:#2e7d32;color:white;text-decoration:none;border-radius:8px">← Volver al Inicio</a></div>
+
+<div style="padding:15px">
+<a href="index_biologia_moderno.html" style="padding:10px 16px;background:#2e7d32;color:white;text-decoration:none;border-radius:8px">← Volver al Inicio</a>
+</div>
+
+<div class="particles"></div>
+
+<nav>
+<a href="#quees">¿Qué es?</a>
+<a href="#etapas">Etapas</a>
+<a href="#importancia">Importancia</a>
+<a href="#datos">Datos</a>
+<a href="#quiz">Quiz</a>
+</nav>
+
+<header>
+<h1>CICLO CELULAR</h1>
+<p>El ciclo celular es el proceso mediante el cual una célula crece, duplica su ADN y se divide para formar dos células hijas idénticas.</p>
+</header>
+
+<section id="quees">
+<h2 class="titulo">¿Qué es el ciclo celular?</h2>
+<div class="bloque">
+<img class="imagen" src="https://images.unsplash.com/photo-1532187643603-ba119ca4109e?q=80&w=1200" alt="Células">
+<p>Es la secuencia ordenada de etapas que permiten el crecimiento, la duplicación del material genético y la división celular.</p>
+</div>
+</section>
+
+<section id="etapas">
+<h2 class="titulo">Etapas del ciclo celular</h2>
+<div class="grid">
+<div class="card"><h3>G1</h3><p>La célula crece y fabrica proteínas.</p></div>
+<div class="card"><h3>S</h3><p>Se duplica completamente el ADN.</p></div>
+<div class="card"><h3>G2</h3><p>Se prepara para la división.</p></div>
+<div class="card"><h3>Fase M</h3><p>Ocurren la mitosis y la citocinesis.</p></div>
+</div>
+</section>
+
+<section id="importancia">
+<h2 class="titulo">Importancia</h2>
+<div class="grid">
+<div class="card"><h3>🌱 Crecimiento</h3><p>Permite el desarrollo del organismo.</p></div>
+<div class="card"><h3>🩹 Reparación</h3><p>Reemplaza células dañadas.</p></div>
+<div class="card"><h3>🧬 Reproducción</h3><p>Garantiza la transmisión correcta del ADN.</p></div>
+</div>
+</section>
+
+<section id="datos">
+<h2 class="titulo">Datos interesantes</h2>
+<div class="datos">
+<div class="dato">🔬 La mayor parte del tiempo la célula permanece en la interfase.</div>
+<div class="dato">🧬 El ADN solo se duplica una vez por ciclo.</div>
+<div class="dato">⚖️ Existen puntos de control que evitan errores.</div>
+<div class="dato">🦠 Alteraciones pueden originar cáncer.</div>
+</div>
+</section>
+
+<section id="quiz">
+<h2 class="titulo">Mini Cuestionario</h2>
+<div class="quiz">
+<p><strong>¿En qué fase se duplica el ADN?</strong></p>
+<label><input type="radio" name="p1" value="a">G1</label><br><br>
+<label><input type="radio" name="p1" value="b">S</label><br><br>
+<label><input type="radio" name="p1" value="c">M</label><br><br>
+<button onclick="verificar()">Comprobar Respuesta</button>
+<div id="resultado" class="respuesta"></div>
+</div>
+</section>
+
+<footer><h3>Fuentes Referenciales</h3><p>OMS • NIH • MedlinePlus • Britannica</p></footer>
+
+<script>
+function verificar(){
+let r=document.querySelector('input[name="p1"]:checked');
+let d=document.getElementById("resultado");
+if(!r){d.innerHTML="⚠️ Selecciona una opción.";return;}
+d.innerHTML=r.value==="b"?"✅ ¡Correcto!":"❌ Respuesta incorrecta.";
+}
+const observer=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add("visible");}));
+document.querySelectorAll("section").forEach(s=>observer.observe(s));
+</script>
+</body></html>
