@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biología</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--c1:#161707;--c2:#2C310A;--c3:#576610;--c4:#657C12}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Montserrat,sans-serif;color:#fff;background:linear-gradient(135deg,var(--c1),var(--c2),var(--c3));overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-50%;background:
+radial-gradient(circle at 20% 20%,#657C1255,transparent 18%),
+radial-gradient(circle at 80% 30%,#57661055,transparent 18%),
+radial-gradient(circle at 40% 80%,#657C1233,transparent 22%);
+filter:blur(40px);animation:bg 18s linear infinite;z-index:-2}
+@keyframes bg{to{transform:rotate(360deg)}}
+nav{position:fixed;top:0;width:100%;display:flex;justify-content:space-between;padding:18px 8%;background:#161707aa;backdrop-filter:blur(12px);z-index:9}
+nav a{color:#fff;text-decoration:none;margin-left:20px}
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:0 8%;gap:40px}
+h1{font-size:4rem}.hero p{margin:20px 0;line-height:1.7}
+.btn{display:inline-block;background:linear-gradient(45deg,var(--c4),var(--c3));padding:16px 34px;border-radius:40px;color:#fff;text-decoration:none;transition:.3s}
+.btn:hover{transform:translateY(-6px);box-shadow:0 12px 30px #657c1270}
+.dna{width:100%;max-width:450px;justify-self:center;animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-18px)}}
+.wave{display:block}
+section{padding:80px 8%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:#ffffff10;border:1px solid #ffffff20;border-radius:20px;overflow:hidden;text-decoration:none;color:#fff;transition:.35s}
+.card:hover{transform:translateY(-10px) rotateX(6deg)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card div{padding:18px}
+.stats{display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;text-align:center}
+.stat{padding:20px}.num{font-size:3rem;color:#cfe86b;font-weight:800}
+footer{padding:40px;background:#161707;text-align:center}
+@media(max-width:900px){.hero{grid-template-columns:1fr;text-align:center;padding-top:90px}h1{font-size:2.8rem}}
+</style>
+</head>
+<body>
+<section style="max-width:900px;margin:20px auto;padding:20px;background:#f4fff4;border-radius:12px">
+<h2>Bienvenido</h2>
+<p>Explora los principales temas de Biología mediante este sitio web. Haz clic en cualquiera de las secciones para aprender sobre metabolismo, fotosíntesis, la célula, mitosis y más.</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Leaf_icon.svg/512px-Leaf_icon.svg.png" style="max-width:120px">
+</section>
+
+<nav><strong>🧬 BIOLOGÍA</strong><div><a href="#temas">Temas</a><a href="metabolismo_corregido.html">Metabolismo</a><a href="fotosíntesis.html">Fotosíntesis</a><a href="ciclo_celular.html">Ciclo celular</a><a href="avanca2.0.html">La célula</a><a href="mitosis.html">Mitosis</a></div></nav>
+<section class="hero">
+<div><h1>Explora el mundo de la Biología</h1><p>Descubre la vida desde las células hasta los ecosistemas mediante una experiencia interactiva y moderna.</p><a class="btn" href="#temas">Comenzar</a></div>
+<img class="dna" src="https://upload.wikimedia.org/wikipedia/commons/8/87/DNA_orbit_animated_static.svg">
+</section>
+<svg class="wave" viewBox="0 0 1440 140"><path fill="#161707" d="M0,96L80,85.3C160,75,320,53,480,64C640,75,800,117,960,122.7C1120,128,1280,96,1360,80L1440,64V140H0Z"/></svg>
+<section id="temas"><h2 style="margin-bottom:30px">Temas</h2><div class="grid">
+<a class="card" href="metabolismo_corregido.html"><img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80"><div><h3>Metabolismo</h3><p>Procesos químicos esenciales.</p></div></a>
+<a class="card" href="fotosíntesis.html"><img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80"><div><h3>Fotosíntesis</h3><p>La energía del Sol convertida en vida.</p></div></a>
+<a class="card" href="mitosis.html"><img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&w=800&q=80"><div><h3>Mitosis</h3><p>División celular.</p></div></a>
+
+<a class="card" href="ciclo_celular.html"><img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?auto=format&fit=crop&w=800&q=80"><div><h3>Ciclo celular</h3><p>Etapas por las que pasa una célula antes de dividirse.</p></div></a>
+<a class="card" href="ciclo_celular.html"><img src="https://images.unsplash.com/photo-1530210124550-912dc1381cb8?auto=format&fit=crop&w=800&q=80"><div><h3>La célula</h3><p>Unidad básica de todos los seres vivos.</p></div></a>
+</div></section>
+<section><div class="stats"><div class="stat"><div class="num" data-n="5">0</div>Temas</div><div class="stat"><div class="num" data-n="100">0</div>% Ciencia</div><div class="stat"><div class="num" data-n="50">0</div>+ Recursos</div></div></section>
+<footer>Proyecto Web Educativo • Biología</footer>
+<script>
+document.querySelectorAll('.num').forEach(e=>{let t=+e.dataset.n,c=0;let i=setInterval(()=>{c++;e.textContent=c;if(c>=t)clearInterval(i)},20)});
+</script>
+</body></html>
